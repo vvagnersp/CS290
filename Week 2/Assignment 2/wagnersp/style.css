@@ -1,0 +1,39 @@
+/* Table style selectors */
+table{
+    border-style: solid;
+}
+
+th {
+    border-style: solid;
+    font-weight: normal;
+}
+
+td {
+    border-style: solid;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: lightblue;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: lightcoral;
+}
+
+/* Div style selectors */
+.outer-content {
+    background-color: lightpink;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 75%;
+}
+
+.inner-content {
+    background-color: lightcyan;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 75%;
+}
