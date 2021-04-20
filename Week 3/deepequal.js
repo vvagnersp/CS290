@@ -9,7 +9,7 @@ function deepEqual(item1, item2) {
     }
     // Check for objects
     else if (typeof(item1) == 'object' && typeof(item2) == 'object') {
-        // If one is type null and the other is a true object, return false
+        // Check that one of the items in not null
         if (item1 == null || item2 == null) {
             return false;
         }
