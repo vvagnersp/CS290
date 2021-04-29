@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Mountains</h1>
+
+    <div id="mountains"></div>
+    
+    <script>
+      const MOUNTAINS = [
+        {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+        {name: "Everest", height: 8848, place: "Nepal"},
+        {name: "Mount Fuji", height: 3776, place: "Japan"},
+        {name: "Vaalserberg", height: 323, place: "Netherlands"},
+        {name: "Denali", height: 6168, place: "United States"},
+        {name: "Popocatepetl", height: 5465, place: "Mexico"},
+        {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+      ];
+      // NOTE: WASN'T ABLE TO GET THE NUMBERS TO ALIGN... WHOOPS
+
+
+      // Your code here
+      var tbl = document.createElement("table");
+      
+      // Create the rows of the table
+      for (var i = MOUNTAINS.length; i >= 0; i--){
+          var newRow = document.createElement("tr");
+          tbl.appendChild(newRow);
+      }
+      
+      // Add the keys as the header in the first row
+      var rowHeader = Object.keys(MOUNTAINS[0]);
+      
+      for (var i = 0; i < rowHeader.length; i++){
+          var hdr = document.createElement("th");
+          hdr.textContent = rowHeader[i];
+          tbl.children[0].appendChild(hdr);
+      } 
+
+      // Create the rest of the table stuff
+      for (var mt = MOUNTAINS.length - 1; mt >= 0; mt--){
+          for (var i = 0; i < rowHeader.length; i++){
+              var tdat = document.createElement("td");
+              tdat.textContent = MOUNTAINS[mt][rowHeader[i]];
+              tbl.children[mt + 1].appendChild(tdat)
+           }
+      }
+
+      document.getElementById("mountains").appendChild(tbl)
+
+    </script>
+
+
+</body>
+
+
+</html>

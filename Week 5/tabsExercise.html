@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+<tab-panel>
+    <div data-tabname="one">Tab one</div>
+    <div data-tabname="two">Tab two</div>
+    <div data-tabname="three">Tab three</div>
+  </tab-panel>
+  <script>
+    function asTabs(node) {
+      // Your code here.
+      var tabs = Array.from(node.children)
+
+      for (var i = tabs.length - 1; i >= 0; i--){
+        var button = document.createElement("button");
+        button.textContent = node.getAttribute("date-tabname");
+      }
+    }
+    asTabs(document.querySelector("tab-panel"));
+  </script>
+
+</html>
