@@ -74,6 +74,7 @@ function genTable(table) {
 
 
 /* MAKE SELECTABLE CELLS */
+
 function highlightCell(direction=null) {
   // Row and cell modifiers
   var rowChange = 0;
