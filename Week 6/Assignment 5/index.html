@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Spencer Wagner CS290 A5</title>
+  <script src="script.js"></script>
+  <style>
+    .text-input {
+      width: 350px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="form1">
+    <form name="get weather" onsubmit="return false">
+      <label for="location">Location:</label><br>
+      <input id="location" class="text-input" type="text" id="location" name="location"
+      placeholder="CITY_NAME, COUNTRY CODE or ZIP_CODE, COUNTRY_CODE">
+      <input type="submit" id="locSubmit" name="locSubmit" value="Get weather data">
+    </form>
+  </div>
+
+  <br><br><br>
+  <div id="form2">
+    <form>
+      <label for="httpbin">Httpbin POST:</label><br>
+      <input type="submit" value="Submit post request">
+    </form>
+  </div>
+
+</body>
+</html>
